@@ -85,7 +85,7 @@ To enable chat history, you will need to set up CosmosDB resources. The ARM temp
 
 As above, start the app with `start.cmd`, then visit the local running app at http://127.0.0.1:50505. Or, just run the backend in debug mode using the VSCode debug configuration in `.vscode/launch.json`.
 
-**Note:** For now, the AOAI On Your Data service only supports vector search for Cosmos DB. For more details, check this link: [Introducing vector database capabilities in Azure Cosmos DB for NoSQL (Public Preview)](https://devblogs.microsoft.com/cosmosdb/introducing-vector-database-capabilities-in-azure-cosmos-db-for-nosql/)
+**Note:** For now, the AOAI On Your Data service only supports vector search for Cosmos DB. For more details, check this link: [Azure Cosmos DB for NoSQL Vector Search announcement](https://aka.ms/CosmosDBDiskANNBlog/)
 
 #### Local Setup: Enable Message Feedback
 To enable message feedback, you will need to set up CosmosDB resources. Then specify these additional environment variable:
