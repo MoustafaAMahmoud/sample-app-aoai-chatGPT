@@ -44,6 +44,13 @@
                 "description": "Name of Application Insights"
             }
         },
+        "DataSourceType": {
+            "type": "string",
+            "defaultValue": "",
+            "metadata": {
+                "description": "Should be set to AzureCognitiveSearch when adding your data with Azure AI Search"
+            }
+        },
         "AzureSearchService": {
             "type": "string",
             "defaultValue": "",
@@ -391,6 +398,10 @@
                         {
                             "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
                             "value": "[reference(resourceId('Microsoft.Insights/components', parameters('ApplicationInsightsName')), '2015-05-01').InstrumentationKey]"
+                        },
+                        {
+                            "name": "DATASOURCE_TYPE ",
+                            "value": "[parameters('DataSourceType')]"
                         },
                         {
                             "name": "AZURE_SEARCH_SERVICE",
