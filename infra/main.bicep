@@ -13,6 +13,7 @@ param appServicePlanName string = ''
 param backendServiceName string = ''
 param resourceGroupName string = ''
 
+param datasourceType string = ''
 param searchServiceName string = ''
 param searchServiceResourceGroupName string = ''
 param searchServiceResourceGroupLocation string = location
@@ -115,6 +116,7 @@ module backend 'core/host/appservice.bicep' = {
     authIssuerUri: authIssuerUri
     appSettings: {
       // search
+      DATASOURCE_TYPE: datasourceType
       AZURE_SEARCH_INDEX: searchIndexName
       AZURE_SEARCH_SERVICE: searchService.outputs.name
       AZURE_SEARCH_KEY: searchService.outputs.adminKey
@@ -291,6 +293,7 @@ output AZURE_RESOURCE_GROUP string = resourceGroup.name
 output BACKEND_URI string = backend.outputs.uri
 
 // search
+output DATASOURCE_TYPE string = datasourceType
 output AZURE_SEARCH_INDEX string = searchIndexName
 output AZURE_SEARCH_SERVICE string = searchService.outputs.name
 output AZURE_SEARCH_SERVICE_RESOURCE_GROUP string = searchServiceResourceGroup.name
