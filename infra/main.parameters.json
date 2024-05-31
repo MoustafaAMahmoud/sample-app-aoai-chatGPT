@@ -20,6 +20,9 @@
     "openAiSkuName": {
       "value": "${AZURE_OPENAI_SKU_NAME}"
     },
+    "datasourceType": {
+      "value": "${DATASOURCE_TYPE}"
+    },
     "searchServiceName": {
       "value": "${AZURE_SEARCH_SERVICE}"
     },
