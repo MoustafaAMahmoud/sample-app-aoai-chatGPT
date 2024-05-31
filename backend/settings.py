@@ -656,7 +656,7 @@ class _BaseSettings(BaseSettings):
         arbitrary_types_allowed=True,
         env_ignore_empty=True
     )
-    datasource_type: Optional[str] = Field(None, env="DATASOURCE_TYPE")
+    datasource_type: Optional[str] = None
     auth_enabled: bool = False
     sanitize_answer: bool = False
     use_promptflow: bool = False
