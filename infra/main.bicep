@@ -116,7 +116,7 @@ module backend 'core/host/appservice.bicep' = {
     authIssuerUri: authIssuerUri
     appSettings: {
       // search
-      DATASOURCE_TYPE : datasourceType
+      DATASOURCE_TYPE: datasourceType
       AZURE_SEARCH_INDEX: searchIndexName
       AZURE_SEARCH_SERVICE: searchService.outputs.name
       AZURE_SEARCH_KEY: searchService.outputs.adminKey
